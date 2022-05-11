@@ -1,8 +1,8 @@
 import axios from "axios";
-const { OPENAI_SECRET } = process.env;
+const { OPENAI_SECRET_KEY } = process.env;
 
 //API URL
-const BASE_URL = "https://api.openai.com/v1/engines/";
+const BASE_URL = "https://api.openai.com/v1/engines";
 
 export const api = axios.create({
   baseURL: `${BASE_URL}`,
@@ -14,7 +14,7 @@ export const promptOpenAI = async ({ engine, body }) => {
     const options = {
       method: "post",
       url: `${BASE_URL}${engine}/completions`,
-      headers: { Authorization: `Bearer ${OPENAI_SECRET}` },
+      headers: { Authorization: `Bearer ${OPENAI_SECRET_KEY}` },
       data: body,
     };
     const { data } = await api(options);
