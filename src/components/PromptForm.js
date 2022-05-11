@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/PromptForm.css";
 
 const handleSubmit = (e) => {
   console.log("Hello");
