@@ -1,21 +1,12 @@
 import React from "react";
 import "../style/PromptForm.css";
-import { promptOpenAI } from "../api";
+import { promptOpenAI } from "../axios";
 
 const PromptForm = ({ prompt, setPrompt, results, setResults }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const body = {
-        prompt: prompt,
-        temperature: 0.9,
-        max_tokens: 68,
-        top_p: 1.0,
-        frequency_penalty: 0.0,
-        presence_penalty: 0.0,
-      };
-      const engine = "/text-curie-001";
-      const { choices } = await promptOpenAI(engine, body);
+      const { choices } = await promptOpenAI({ prompt: prompt });
       setResults([...results, { prompt: prompt, response: choices[0].text }]);
       setPrompt("");
     } catch (err) {
