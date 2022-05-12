@@ -1,16 +1,17 @@
 import React from "react";
 import "../style/PromptForm.css";
+import { promptOpenAI } from "../axios";
 
 const PromptForm = ({ prompt, setPrompt, results, setResults }) => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setResults([...results, prompt]);
+      const { choices } = await promptOpenAI({ prompt: prompt });
+      setResults([...results, { prompt: prompt, response: choices[0].text }]);
       setPrompt("");
-    } catch (error) {
-      throw error;
+    } catch (err) {
+      console.error(err);
     }
-    console.log("THESE ARE MY PROMPTS", results);
   };
 
   return (
