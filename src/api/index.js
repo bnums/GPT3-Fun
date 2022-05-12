@@ -1,5 +1,5 @@
 import axios from "axios";
-const { OPENAI_SECRET_KEY } = process.env;
+const OPENAI_SECRET_KEY = "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";
 
 //API URL
 const BASE_URL = "https://api.openai.com/v1/engines";
@@ -9,7 +9,7 @@ export const api = axios.create({
 });
 
 // OpenAI API call for prompts
-export const promptOpenAI = async ({ engine, body }) => {
+export const promptOpenAI = async (engine, body) => {
   try {
     const options = {
       method: "post",
