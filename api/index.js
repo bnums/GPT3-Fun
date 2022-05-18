@@ -8,7 +8,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-apiRouter.get("/health", (req, res) => {
+apiRouter.get("/", (req, res) => {
   res.send({ message: "This is a healthy array server" });
 });
 
