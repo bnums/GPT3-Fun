@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //Array API URL
-const BASE_URL = "https://my-shopify-gpt3-fun.herokuapp.com/api";
+const BASE_URL = "/api";
 
 // OpenAI API call for prompts
 export const promptOpenAI = async ({ prompt }) => {
