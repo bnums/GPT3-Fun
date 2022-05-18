@@ -8,8 +8,15 @@ function App() {
   const [results, setResults] = useState([]);
 
   return (
-    <div className="App">
-      <div>Welcome to GPT-3 Fun</div>
+    <div className="app__container">
+      <section className="intro__section">
+        <h1 className="intro__section__title">Welcome to Fun with GPT-3</h1>
+        <p className="intro__section__paragraph">
+          This is a simple app designed as an introduction to the GPT-3 API
+          created by Open-AI. The form below primarily takes in text prompts for
+          completion.
+        </p>
+      </section>
       <PromptForm
         prompt={prompt}
         setPrompt={setPrompt}

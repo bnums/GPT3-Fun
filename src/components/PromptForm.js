@@ -16,7 +16,7 @@ const PromptForm = ({ prompt, setPrompt, results, setResults }) => {
 
   return (
     <section className="prompt">
-      <h1 className="form__title">Prompt Area: </h1>
+      <h1 className="form__title">Enter Prompt Here: </h1>
       <form className="prompt__form" onSubmit={handleSubmit}>
         <label>
           Prompt:
