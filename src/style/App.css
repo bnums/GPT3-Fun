@@ -1,2 +1,7 @@
-
-
+.app__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1.5em;
+  max-width: 1400px;
+}

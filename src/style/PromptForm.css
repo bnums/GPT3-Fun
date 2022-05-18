@@ -1,0 +1,32 @@
+.prompt {
+  margin: 1.5em 0em;
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt__input {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 10px;
+}
+
+.prompt__submit__button {
+  background: #016abc;
+  color: #fff;
+  border: 1px solid #eee;
+  height: 45px;
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  transition: all 0.5s ease;
+}
+.prompt__submit__button:hover {
+  background: #b9dfff;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}
