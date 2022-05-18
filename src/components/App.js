@@ -14,7 +14,7 @@ function App() {
         <p className="intro__section__paragraph">
           This is a simple app designed as an introduction to the GPT-3 API
           created by Open-AI. The form below primarily takes in text prompts for
-          completion.
+          completion. Please enter a prompt to begin.
         </p>
       </section>
       <PromptForm
