@@ -26,4 +26,8 @@ apiRouter.post("/prompt", async (req, res, next) => {
   }
 });
 
+apiRouter.get("*", (req, res, next) => {
+  res.status(404).send("This route does not exist");
+});
+
 module.exports = apiRouter;
