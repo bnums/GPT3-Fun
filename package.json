@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:dev": "concurrently \"npm run build\" \" npm run start \" \"nodemon index.js\"",
+    "start:dev": "concurrently \"react-scripts start\" \"nodemon index.js\"",
     "start": "node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

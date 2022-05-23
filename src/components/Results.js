@@ -1,10 +1,11 @@
 import React from "react";
 import ResultsCard from "./ResultsCard";
+import "../style/Results.css";
 
 const Results = ({ results }) => {
   return (
     <section className="results">
-      <h1>Results:</h1>
+      <h2 className="results__title">Responses:</h2>
       <div className="results__container">
         {results?.length
           ? results

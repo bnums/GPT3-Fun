@@ -1,7 +1,5 @@
 .result__card {
-  margin: 0.75em 0;
-  border: 3px solid black;
-  padding: 8px;
+  margin: 1em 0;
 }
 
 .result__card__prompt {
@@ -10,4 +8,11 @@
 
 .result__card__response {
   margin: 0.25em 0;
+}
+
+.result__card__seperator {
+  margin: 3em auto;
+  border: 0;
+  border-top: 2px solid #8d8d8d;
+  max-width: 80%;
 }

@@ -10,11 +10,15 @@ function App() {
   return (
     <div className="app__container">
       <section className="intro__section">
-        <h1 className="intro__section__title">Welcome to Fun with GPT-3</h1>
+        <h1 className="intro__section__title">Welcome to Fun</h1>
+        <h1 className="intro__section__title">with GPT-3</h1>
         <p className="intro__section__paragraph">
           This is a simple app designed as an introduction to the GPT-3 API
-          created by Open-AI. The form below primarily takes in text prompts for
-          completion. Please enter a prompt to begin.
+          created by Open-AI.
+        </p>
+        <p>
+          The form below primarily takes in text prompts for completion. Please
+          enter a prompt to begin.
         </p>
       </section>
       <PromptForm

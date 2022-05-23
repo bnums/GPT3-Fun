@@ -1,0 +1,10 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.results__title {
+  font-size: 32px;
+}
