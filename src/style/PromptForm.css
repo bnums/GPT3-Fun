@@ -7,13 +7,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .prompt__input {
   width: 100%;
   height: 57px;
   padding: 10px;
-  margin: 0.5em 0;
+  margin: 2.5em 0 1em 0;
   border-radius: 50px;
 }
 .prompt__button__group {

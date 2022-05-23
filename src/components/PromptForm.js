@@ -12,7 +12,17 @@ const PromptForm = ({ prompt, setPrompt, results, setResults }) => {
 
     try {
       const { choices } = await promptOpenAI({ prompt: prompt });
-      setResults([...results, { prompt: prompt, response: choices[0].text }]);
+      if (choices) {
+        setResults([...results, { prompt: prompt, response: choices[0].text }]);
+      } else {
+        setResults([
+          ...results,
+          {
+            prompt: prompt,
+            response: "Sorry an error occurred, please ask your prompt again",
+          },
+        ]);
+      }
       setPrompt("");
       setLoading("");
     } catch (err) {
@@ -25,7 +35,7 @@ const PromptForm = ({ prompt, setPrompt, results, setResults }) => {
     <section className="prompt">
       <form className="prompt__form" onSubmit={handleSubmit}>
         <label>
-          <h2 className="prompt__form__label">User Prompt:</h2>
+          <h2 className="prompt__form__label">User Prompt</h2>
           <input
             className="prompt__input"
             name="submitted-prompt"
