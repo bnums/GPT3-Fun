@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //Array API URL
-const BASE_URL = "http://localhost:4000/api"; //"/api";
+const BASE_URL = "/api";
 
 // OpenAI API call for prompts
 export const promptOpenAI = async ({ prompt }) => {
